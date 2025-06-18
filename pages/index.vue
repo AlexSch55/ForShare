@@ -23,25 +23,3 @@
 		<BackgroundsSpace/>
     </div>
 </template>
-
-<script setup lang="ts">
-import { useQuery, useMutation } from "@tanstack/vue-query"
-const {
-	data: info,
-	isLoading: infoLoading,
-	error: infoError,
-	isError,
-	refetch: refetchInfo,
-} = useQuery({
-	queryKey: ["advertisements"],
-	queryFn: async () => {
-		try {
-			const dataUrl = `/advertiser/project/campaign/advertisement/list`
-			return dataUrl
-			/////////////////
-		} catch (error) {
-			// throw new AdvertisementError("Failed to fetch advertisements", "FETCH_ERROR", error)
-		}
-	},
-})
-</script>
