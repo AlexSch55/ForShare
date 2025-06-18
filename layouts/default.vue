@@ -1,0 +1,4 @@
+<template>
+    <NavMenu/>
+    <NuxtPage />
+</template>
