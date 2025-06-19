@@ -1,7 +1,7 @@
 <template>
     <div
-        class="absolute inset-0 w-full h-full -z-10"
-        :style="`background: url('${Space}'); background-size: cover; background-position: center;`"
+        class="absolute inset-0 w-full h-full -z-10 bg-cover bg-center bg-no-repeat"
+        :style="`background: url('${Space}');`"
     >
     </div>
 </template>
