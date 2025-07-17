@@ -13,7 +13,7 @@ html{
   font-family: "Montserrat";
   font-style: normal;
   font-display: swap;
-  src: url(/fonts/Montserrat.ttf);
+  src: url(/assets/fonts/Montserrat.ttf);
 }
 
 .page_padding{

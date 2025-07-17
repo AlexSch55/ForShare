@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-row items-center justify-start fixed page_padding py-4 w-full z-2 select-none backdrop_filter">
+    <div class="flex flex-row items-center justify-start fixed page_padding py-4 w-full z-[999] select-none backdrop_filter">
         <p @click="navigateTo('/')" class="text-2xl max-md:text-xl font-semibold cursor-pointer">ShareProject</p>
         <div class="mx-auto flex flex-row items-center justify-center gap-12 max-lg:!hidden">
             <a href="/" class="hover:opacity-80 cursor-pointer">Главная</a>
