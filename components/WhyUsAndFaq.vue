@@ -2,14 +2,14 @@
   <section class="w-full flex flex-col items-center justify-center py-20 bg-transparent page_padding">
     <div class="w-full max-w-4xl mx-auto">
       <h2 class="text-5xl font-bold text-center text-white mb-4">Частые вопросы</h2>
-      <p class="text-lg text-center text-gray-300 mb-10">Здесь вы найдете ответы на самые часто задаваемые вопросы</p>
+      <p class="text-2xl max-lg:text-xl max-md:text-base max-w-4xl mb-10">Здесь вы найдете ответы на самые часто задаваемые вопросы</p>
       <div class="flex flex-col gap-6">
         <div
           v-for="(item, idx) in faqList"
           :key="idx"
-          class="w-full bg-black/70 border border-indigo-400 rounded-2xl transition-all duration-300 overflow-hidden"
+          class="w-full bg-black/70 border border-white rounded-2xl transition-all duration-300 overflow-hidden"
           :class="{
-            'shadow-lg border-indigo-500': openIndex === idx,
+            'shadow-lg !border-indigo-500 bg-gradient-to-br from-black via-black/70 to-indigo-600': openIndex === idx,
             'hover:border-indigo-400': openIndex !== idx
           }"
         >
@@ -18,12 +18,12 @@
             @click="toggle(idx)"
           >
             <span class="flex items-center gap-4">
-              <span class="min-w-8 h-8 flex items-center justify-center rounded-full border border-white text-lg text-white font-semibold" :class="{'bg-indigo-400 !border-indigo-300': openIndex === idx}">{{ idx + 1 }}</span>
+              <span class="min-w-8 h-8 flex items-center justify-center rounded-full border border-white text-lg text-white font-semibold">{{ idx + 1 }}</span>
               <span class="text-xl text-white font-medium">{{ item.q }}</span>
             </span>
             <span class="ml-4">
-              <svg v-if="openIndex === idx" width="28" height="28" fill="none" viewBox="0 0 24 24"><path stroke="#a5b4fc" stroke-width="2" stroke-linecap="round" d="M6 12h12"/></svg>
-              <svg v-else width="28" height="28" fill="none" viewBox="0 0 24 24"><path stroke="#a5b4fc" stroke-width="2" stroke-linecap="round" d="M12 6v12M6 12h12"/></svg>
+              <svg v-if="openIndex === idx" width="28" height="28" fill="none" viewBox="0 0 24 24"><path stroke="#ffffff" stroke-width="2" stroke-linecap="round" d="M6 12h12"/></svg>
+              <svg v-else width="28" height="28" fill="none" viewBox="0 0 24 24"><path stroke="#fff" stroke-width="2" stroke-linecap="round" d="M12 6v12M6 12h12"/></svg>
             </span>
           </button>
           <transition name="faq-fade">
